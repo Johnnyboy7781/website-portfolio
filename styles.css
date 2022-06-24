@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Anek Malayalam', sans-serif;
+}
+
+body {
+    width: 100%;
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+/* Nav styles */
+header {
+    display: flex;
+    justify-content: end;
+    padding: 25px;
+    width: 100%;
+    position: fixed;
+}
+
+.hamburger__line {
+    background-color: white;
+    box-shadow: 1px 1px 5px black;
+    height: 3px;
+    width: 30px;
+}
+
+.mt {
+    margin-top: 5px;
+}
+
+/* Hero styles */
+.hero {
+    background: linear-gradient(207.03deg, #063CFF 0%, #FF06F5 100%);
+    padding-top: 45px;
+    color: white;
+    padding-inline: 25px;
+}
+
+.hero > div {
+    text-shadow: 2px 2px 2px black;
+}
+
+.hero__name {
+    font-size: 3em;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
