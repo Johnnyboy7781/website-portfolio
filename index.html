@@ -7,37 +7,62 @@
     <title>Jonathan McDonnell</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@200;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@200;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="hamburger__container">
-            <div class="hamburger__line"></div>
-            <div class="hamburger__line mt"></div>
-            <div class="hamburger__line mt"></div>
+            <div class="hamburger__line top"></div>
+            <div class="hamburger__line mt mid"></div>
+            <div class="hamburger__line mt bottom"></div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li>Contact me</li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <main>
-        <div class="hero__container">
+        <section class="hero__container">
             <div class="hero">
                 <div class="hero__name">
-                    I'm<br /> Jonathan<br /> McDonnell
+                    Hi, I'm<br /> Jonathan<br /> McDonnell
                 </div>
                 <div class="hero__position">
                     Full-stack web developer
                 </div>
-                <div class="hero__greeting">
-                    Welcome in
-                </div>
                 <div class="hero__btn-container">
-                    <button class="hero__btn">
+                    <a class="hero__btn" href="#about">
                         About me
-                    </button>
+                    </a>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section class="container" id="about">
+            <h2 class="title about__underline">About me</h2>
+            <p class="section-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro veritatis libero commodi consequuntur! Perferendis eum commodi ut. Quas dolorum quibusdam quisquam ex esse temporibus, rerum officiis doloremque impedit expedita cum.
+            Non totam nobis inventore ducimus placeat accusantium, odit amet unde sit laudantium tempora. Labore tempore excepturi, quis voluptates laudantium eligendi natus accusamus placeat minus harum enim libero autem sapiente nam.
+            Ut dignissimos quam explicabo, nam et nobis quas esse, architecto autem nesciunt quisquam animi assumenda vel fugit harum. Veritatis voluptate quasi fugit nemo aliquam eaque? Facilis ratione eum quos! Delectus.</p>
+            <div class="about__btn-container">
+                <a class="about__btn" href="#projects">
+                    My projects
+                </a>
+            </div>
+        </section>
+
+        <div class="wave-projects-top"></div>
+
+        <section class="projects" id="projects">
+            <div class="container">
+                <h2 class="title projects__underline">Projects</h2>
+                <p class="section-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repudiandae, fuga eveniet iusto corrupti ut quisquam expedita cum debitis magni ullam, earum tenetur culpa accusamus, natus ad quo ex eligendi.</p>
+            </div>
+        </section>
     </main>
 
     <footer>
