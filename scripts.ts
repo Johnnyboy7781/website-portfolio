@@ -1,4 +1,4 @@
-const hamburger = document.querySelector(".hamburger__container");
+const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector("nav");
 const body = document.querySelector("body");
 
@@ -18,5 +18,6 @@ const menuToggle = () => {
 }
 
 
-body.addEventListener('click', closeMenuIfOpen);
+// body.addEventListener('click', closeMenuIfOpen);
 hamburger.addEventListener('click', menuToggle);
+navMenu.addEventListener('click', menuToggle);

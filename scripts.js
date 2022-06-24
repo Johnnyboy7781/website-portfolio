@@ -1,4 +1,4 @@
-var hamburger = document.querySelector(".hamburger__container");
+var hamburger = document.querySelector(".hamburger");
 var navMenu = document.querySelector("nav");
 var body = document.querySelector("body");
 var closeMenuIfOpen = function (e) {
@@ -16,5 +16,6 @@ var menuToggle = function () {
         navMenu.className = "open";
     }
 };
-body.addEventListener('click', closeMenuIfOpen);
+// body.addEventListener('click', closeMenuIfOpen);
 hamburger.addEventListener('click', menuToggle);
+navMenu.addEventListener('click', menuToggle);

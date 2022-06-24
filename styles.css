@@ -26,6 +26,7 @@ header {
     padding: 25px;
     width: 100%;
     position: fixed;
+    z-index: 999;
 }
 
 .hamburger__container {
@@ -34,8 +35,11 @@ header {
     display: flex;
     flex-direction: column;
     align-items: end;
-    cursor: pointer;
     position: relative;
+}
+
+.hamburger {
+    cursor: pointer;
 }
 
 .hamburger__line {
@@ -44,18 +48,19 @@ header {
     height: 3px;
     width: 30px;
     transition: 300ms ease-out;
+    transform-origin: center right;
 }
 
-.hamburger__container:hover > .top {
-    width: 55px;
+.hamburger:hover > .top {
+    transform:scaleX(1.8);
 }
 
-.hamburger__container:hover > .mid {
-    width: 43px;
+.hamburger:hover > .mid {
+    transform: scaleX(1.4);
 }
 
-.hamburger__container:hover > .bottom {
-    width: 35px;
+.hamburger:hover > .bottom {
+    transform: scaleX(1.2);
 }
 
 .mt {
@@ -68,7 +73,8 @@ nav {
     color:black;
     padding: 15px;
     border-radius: 0.7em;
-    bottom: -140px;
+    bottom: -170px;
+    right: 0;
     box-shadow: 1px 1px 5px black;
     text-align: center;
     font-size: 1.4em;
@@ -76,6 +82,7 @@ nav {
     transform: translateY(-35px);
     transition: 150ms;
     pointer-events: none;
+    white-space: nowrap;
 }
 
 nav ul {
@@ -87,7 +94,6 @@ nav ul li a {
 }
 
 .open {
-    display: block;
     opacity: 1;
     transform: translateY(0px);
     pointer-events: all;
@@ -121,7 +127,7 @@ nav ul li a {
 }
 
 .hero__position {
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: 200;
     text-align: center;
     text-shadow: 2px 2px 5 black;
@@ -147,18 +153,21 @@ nav ul li a {
     padding: 0.4em 0.7em;
     border-radius: 0.7em;
     font-size: 1.2em;
-    transition: border-radius 650ms, background-color 250ms;
+    transition: border-radius 175ms, transform 250ms, box-shadow 250ms;
     cursor: pointer;
+    box-shadow: 0px 0px 0px black;
 }
 
 .hero__btn:hover {
     border-radius: 5em;
-    background-color: rgba(50, 58, 244, 0.3);
+    transform: translate(-5px, -5px);
+    transition: border-radius 650ms, transform 250ms, box-shadow 250ms;
+    box-shadow: 5px 5px 0px black;
 }
 
 /* About styles */
 .container {
-    max-width: 45rem;
+    max-width: 35rem;
     margin: 0 auto;
     padding-inline: 25px;
     padding: 35px 25px 0 25px;
@@ -185,6 +194,7 @@ nav ul li a {
 }
 
 .section-text {
+    font-size: 1.2em;
     margin-top: 25px;
 }
 
@@ -195,19 +205,23 @@ nav ul li a {
 
 .about__btn {
     background-color: rgba(0, 0, 0, 0);
-    border: 5px solid #4c1f9e;
-    color: #4c1f9e;
+    border: 5px solid black;
+    color: black;
+    /* #4c1f9e <- alt purple color */ 
     padding: 0.4em 0.7em;
     margin-top: 1.9rem;
     border-radius: 0.7em;
     font-size: 1.2em;
-    transition: border-radius 650ms, background-color 250ms;
+    transition: border-radius 175ms, transform 250ms, box-shadow 250ms;
     cursor: pointer;
+    box-shadow: 0px 0px 0px black;
 }
 
 .about__btn:hover {
     border-radius: 5em;
-    background-color: rgba(50, 58, 244, 0.3);
+    transform: translate(-5px, -5px);
+    transition: border-radius 650ms, transform 250ms, box-shadow 250ms;
+    box-shadow: 5px 5px 0px black;
 }
 
 /* Projects styles */
