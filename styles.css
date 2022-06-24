@@ -237,9 +237,24 @@ nav ul li a {
 .projects {
     background-color: #7b3def;
     color: white;
-    height: 500px;
 }
 
 .projects__underline::after {
     background: #e734ed;
+}
+
+.projects__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.project {
+    background-color: black;
+    aspect-ratio: 2/1;
+    width: 90%;
+    max-width: 35rem;
+    margin-block: 20px;
+    border-radius: 15px;
 }
