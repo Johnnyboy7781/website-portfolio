@@ -9,17 +9,22 @@
 
 body {
     width: 100%;
-    max-width: 90rem;
     margin: 0 auto;
 }
 
 /* Nav styles */
 header {
-    display: flex;
-    justify-content: end;
     padding: 25px;
     width: 100%;
     position: fixed;
+}
+
+.hamburger__container {
+    max-width: 35rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }
 
 .hamburger__line {
@@ -35,10 +40,16 @@ header {
 
 /* Hero styles */
 .hero {
-    background: linear-gradient(207.03deg, #063CFF 0%, #FF06F5 100%);
-    padding-top: 45px;
+    padding-top: 70px;
+    padding-bottom: 30px;
     color: white;
     padding-inline: 25px;
+    max-width: 35rem;
+    margin: 0 auto;
+}
+
+.hero__container {
+    background: linear-gradient(207.03deg, #063CFF 0%, #FF06F5 100%);
 }
 
 .hero > div {
@@ -49,5 +60,42 @@ header {
     font-size: 3em;
     line-height: 1;
     font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero__position {
+    font-size: 1.3em;
+    font-weight: 200;
+    text-align: center;
+    text-shadow: 2px 2px 5 black;
+    margin-bottom: 15px;
+}
+
+.hero__greeting {
+    font-size: 1.5em;
+    text-align: end;
     margin-bottom: 10px;
+}
+
+.hero__btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.hero__btn {
+    background-color: rgba(0, 0, 0, 0);
+    border: 5px solid white;
+    color: white;
+    padding: 0.4em 0.7em;
+    border-radius: 0.7em;
+    font-size: 1.2em;
+    text-shadow: 2px 2px 2px black;
+    box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.5);
+    transition: border-radius 350ms, background-color 250ms;
+    cursor: pointer;
+}
+
+.hero__btn:hover {
+    border-radius: 5em;
+    background-color: rgba(50, 58, 244, 0.3);
 }
