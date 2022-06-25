@@ -90,7 +90,12 @@ nav ul {
 }
 
 nav ul li a {
-    color: black;
+    color: #063CFF;
+    transition: 250ms;
+}
+
+nav ul li a:hover {
+    color: #FF06F5;
 }
 
 .open {
@@ -253,8 +258,60 @@ nav ul li a {
 .project {
     background-color: black;
     aspect-ratio: 2/1;
+    width: 100%;
+    max-width: 35rem;
+    margin-block: 10px;
+    border-radius: 15px;
+}
+
+/* Resume styles */
+.wave-resume-top {
+    aspect-ratio: 1000/200;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('./assets/wave-resume-top.svg');
+}
+
+.resume {
+    background-color: #d244e8;
+    color: white;
+    padding-bottom: 30px;
+}
+
+.resume__underline::after {
+    background-color: #7b3def;
+}
+
+.wave-resume-bottom {
+    aspect-ratio: 1000/200;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('./assets/wave-resume-bottom.svg');
+}
+
+/* Footer styles */
+footer {
+    background-color: #7b3def;
+    color: white;
+    padding-block: 15px;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+footer p {
     width: 90%;
     max-width: 35rem;
-    margin-block: 20px;
-    border-radius: 15px;
+    padding-inline: 25px;
+    text-align: center;
+}
+
+.heart {
+    color: #FF06F5;
 }
