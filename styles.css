@@ -160,14 +160,13 @@ nav ul li a:hover {
     font-size: 1.2em;
     transition: border-radius 175ms, transform 250ms, box-shadow 250ms;
     cursor: pointer;
-    box-shadow: 0px 0px 0px black;
 }
 
 .hero__btn:hover {
     border-radius: 5em;
     transform: translate(-5px, -5px);
     transition: border-radius 650ms, transform 250ms, box-shadow 250ms;
-    box-shadow: 5px 5px 0px black;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
 /* About styles */
@@ -219,14 +218,13 @@ nav ul li a:hover {
     font-size: 1.2em;
     transition: border-radius 175ms, transform 250ms, box-shadow 250ms;
     cursor: pointer;
-    box-shadow: 0px 0px 0px black;
 }
 
 .about__btn:hover {
     border-radius: 5em;
     transform: translate(-5px, -5px);
     transition: border-radius 650ms, transform 250ms, box-shadow 250ms;
-    box-shadow: 5px 5px 0px black;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
 /* Projects styles */
@@ -249,19 +247,91 @@ nav ul li a:hover {
 }
 
 .projects__list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+
+    margin-top: 25px;
+    max-width: 35rem;
+}
+
+.project:nth-child(even) {
+    grid-column-end: 5;
 }
 
 .project {
+    grid-column: span 3;
+    
     background-color: black;
     aspect-ratio: 2/1;
-    width: 100%;
-    max-width: 35rem;
-    margin-block: 10px;
     border-radius: 15px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    
+    transition: 250ms;
+}
+
+.project:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
+.project h3 {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    padding: 4px 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0.7rem;
+}
+
+.one {
+    background-image: url('./assets/01.jpg');
+}
+
+.two {
+    background-image: url('./assets/02.png');
+}
+
+.three {
+    background-image: url('./assets/03.png');
+}
+
+.four {
+    background-image: url('./assets/04.png');
+}
+
+.projects__github {
+    text-align: center;
+    font-size: 1.25em;
+    margin-top: 2rem;
+    text-shadow: 0px 0px 7px black;
+}
+
+.projects__github a {
+    text-decoration: underline;
+    color: white;
+    position: relative;
+}
+
+.projects__github a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: calc(100% + 2px);
+    transform: scaleX(0);
+    transform-origin: right;
+    background-color: #e734ed;
+    bottom: 5px;
+    left: -1px;
+    transition: transform 300ms;
+}
+
+.projects__github a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 /* Resume styles */
