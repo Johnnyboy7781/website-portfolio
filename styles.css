@@ -21,6 +21,15 @@ a {
     text-decoration: none;
 }
 
+.hover {
+    transition: 250ms;
+}
+
+.hover:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
 /* Nav styles */
 header {
     padding: 25px;
@@ -164,15 +173,7 @@ nav ul li a:hover {
     padding: 0.4em 0.7em;
     border-radius: 0.7em;
     font-size: 1.2em;
-    transition: border-radius 175ms, transform 250ms, box-shadow 250ms;
     cursor: pointer;
-}
-
-.hero__btn:hover {
-    border-radius: 5em;
-    transform: translate(-5px, -5px);
-    transition: border-radius 650ms, transform 250ms, box-shadow 250ms;
-    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
 /* About styles */
@@ -222,15 +223,7 @@ nav ul li a:hover {
     margin-top: 1.9rem;
     border-radius: 0.7em;
     font-size: 1.2em;
-    transition: border-radius 175ms, transform 250ms, box-shadow 250ms;
     cursor: pointer;
-}
-
-.about__btn:hover {
-    border-radius: 5em;
-    transform: translate(-5px, -5px);
-    transition: border-radius 650ms, transform 250ms, box-shadow 250ms;
-    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
 /* Projects styles */
@@ -275,13 +268,6 @@ nav ul li a:hover {
     background-size: cover;
     background-position: center;
     cursor: pointer;
-    
-    transition: 250ms;
-}
-
-.project:hover {
-    transform: translate(-5px, -5px);
-    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
 .project h3 {
