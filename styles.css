@@ -67,6 +67,12 @@ header {
     margin-top: 5px;
 }
 
+.backing {
+    transition: 300ms;
+    background: var(--gradient);
+    box-shadow: 1px 1px 2px black;
+}
+
 nav {
     position: absolute;
     background-color: white;
@@ -90,7 +96,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: #063CFF;
+    color: black;
     transition: 250ms;
 }
 
