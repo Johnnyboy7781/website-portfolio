@@ -280,19 +280,19 @@ nav ul li a:hover {
 }
 
 .one {
-    background-image: url('./assets/01.jpg');
+    background-image: url('./assets/projects/01.jpg');
 }
 
 .two {
-    background-image: url('./assets/02.png');
+    background-image: url('./assets/projects/02.png');
 }
 
 .three {
-    background-image: url('./assets/03.png');
+    background-image: url('./assets/projects/03.png');
 }
 
 .four {
-    background-image: url('./assets/04.png');
+    background-image: url('./assets/projects/04.png');
 }
 
 .projects__github {
@@ -326,33 +326,82 @@ nav ul li a:hover {
     transform-origin: left;
 }
 
-/* Resume styles */
-.wave-resume-top {
+/* skills styles */
+.wave-skills-top {
     aspect-ratio: 1000/200;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url('./assets/wave-resume-top.svg');
+    background-image: url('./assets/wave-skills-top.svg');
 }
 
-.resume {
+.skills {
     background-color: #d244e8;
     color: white;
     padding-bottom: 30px;
 }
 
-.resume__underline::after {
+.skills__underline::after {
     background-color: #7b3def;
 }
 
-.wave-resume-bottom {
+.wave-skills-bottom {
     aspect-ratio: 1000/200;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url('./assets/wave-resume-bottom.svg');
+    background-image: url('./assets/wave-skills-bottom.svg');
+}
+
+.skills__section {
+    margin-block: 1rem;
+}
+
+.skills__title {
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    border-radius: 0.7rem 0.7rem 0 0;
+    padding: 5px 5px 5px 5px;
+    position: relative;
+}
+
+.skills__title::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 15px;
+    background-color: transparent;
+    bottom: 0;
+    right: -35px;
+    border-bottom-left-radius: 0.7rem;
+    box-shadow: -8px 0 1px #bd3ed1;
+}
+
+.skills__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0 1rem 1rem 1rem;
+}
+
+.skills__img {
+    width: 100%;
+}
+
+.skills__name {
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.skill__box {
+    width: 4rem;
+    aspect-ratio: 1;
+    margin: 0.6rem;
 }
 
 /* Footer styles */
