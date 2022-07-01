@@ -390,6 +390,7 @@ nav ul li a:hover {
 
 .skills__img {
     width: 100%;
+    align-self: center;
 }
 
 .skills__name {
