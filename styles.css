@@ -435,6 +435,68 @@ nav ul li a:hover {
     justify-content: center;
 }
 
+/* Contact styles */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.7rem;
+    isolation: isolate;
+}
+
+.contact__headshot {
+    height: 15rem;
+    width: 15rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact__headshot img {
+    aspect-ratio: 1;
+    width: inherit;
+    border-radius: 50%;
+}
+
+.contact__headshot:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 104%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #063CFF 0%, #FF06F5 68%);
+    bottom: -2%;
+    z-index: -2;
+}
+
+.contact__info__container {
+    background-color: white;
+    border: calc(15rem * 0.02) solid #FF06F5;
+    transform: translateY(-5rem);
+    z-index: -1;
+    padding-top: 5rem;
+    padding-inline: 1rem;
+    border-radius: 1rem;
+}
+
+.contact__info {
+    display: flex;
+    align-items: center;
+}
+
+.contact__info img {
+    aspect-ratio: 1;
+    width: min(15%, 4rem);
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.contact__info a {
+    cursor: pointer;
+}
+
 /* Footer styles */
 footer {
     background-color: #7b3def;
