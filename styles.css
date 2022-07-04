@@ -39,7 +39,7 @@ header {
 }
 
 .hamburger__container {
-    max-width: 35rem;
+    max-width: 65rem;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -122,7 +122,6 @@ nav ul li a:hover {
 /* Hero styles */
 .hero {
     padding-top: 70px;
-    padding-bottom: 30px;
     color: white;
     padding-inline: 25px;
     max-width: 35rem;
@@ -164,6 +163,9 @@ nav ul li a:hover {
 .hero__btn-container {
     display: flex;
     justify-content: end;
+    max-width: 65rem;
+    margin-inline: auto;
+    padding: 0 25px 25px 0;
 }
 
 .hero__btn {
@@ -178,7 +180,7 @@ nav ul li a:hover {
 
 /* About styles */
 .container {
-    max-width: 35rem;
+    max-width: 65rem;
     margin: 0 auto;
     padding-inline: 25px;
     padding: 35px 25px 0 25px;
@@ -251,7 +253,8 @@ nav ul li a:hover {
     gap: 1rem;
 
     margin-top: 25px;
-    max-width: 35rem;
+    margin-inline: auto;
+    max-width: 45rem;
 }
 
 .project:nth-child(even) {
