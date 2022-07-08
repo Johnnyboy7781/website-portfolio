@@ -8,6 +8,29 @@ var modal = document.querySelector("#modal");
 var projects = document.querySelectorAll(".project");
 var closeModal = document.querySelector(".close-modal");
 
+const projectArr = [
+    {
+        title: "Shasha",
+        description: "lorem shasha",
+        img: "url('./assets/projects/01.jpg')"
+    },
+    {
+        title: "The Tech Blog",
+        description: "lorem tech blog",
+        img: "url('./assets/projects/02.png')"
+    },
+    {
+        title: "Refreshr",
+        description: "lorem refreshr",
+        img: "url('./assets/projects/03.jpg')"
+    },
+    {
+        title: "MyCows Ultimate",
+        description: "lorem mycows",
+        img: "url('./assets/projects/04.png')"
+    }
+]
+
 // Intersection Observer
 
 var options = {
@@ -65,10 +88,22 @@ var menuToggle = function () {
 
 // Modal
 
+const openModal = e => {
+    const title = document.querySelector("#modal__title");
+    const desc = document.querySelector("#modal__desc");
+    const img = document.querySelector("#modal__img");
+    const projectClass = e.target.className.split(" ")[1];
+    const projectIndex = parseInt(projectClass[1]);
+
+    title.innerHTML = projectArr[projectIndex].title;
+    desc.innerHTML = projectArr[projectIndex].description;
+    img.style.backgroundImage = projectArr[projectIndex].img;
+
+    modal.classList.add("open-modal");
+}
+
 projects.forEach(function (project) {
-    project.addEventListener('click', function () {
-        modal.classList.add("open-modal");
-    });
+    project.addEventListener('click', openModal);
 });
 
 modal.addEventListener("click", function (e) {

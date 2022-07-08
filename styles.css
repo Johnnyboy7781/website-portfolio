@@ -282,19 +282,19 @@ nav ul li a:hover {
     border-radius: 0.7rem;
 }
 
-.one {
+.p0 {
     background-image: url('./assets/projects/01.jpg');
 }
 
-.two {
+.p1 {
     background-image: url('./assets/projects/02.png');
 }
 
-.three {
+.p2 {
     background-image: url('./assets/projects/03.jpg');
 }
 
-.four {
+.p3 {
     background-image: url('./assets/projects/04.png');
 }
 
@@ -343,11 +343,36 @@ nav ul li a:hover {
     align-items: center;
 }
 
+.modal__img {
+    background-image: url("./assets/projects/01.jpg");
+    aspect-ratio: 2/1;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px 15px 0 0;
+    margin: 0;
+}
+
+.modal__img h3 {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    padding: 4px 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0.7rem;
+    color: white;
+}
+
 .modal__content {
     max-width: 35rem;
+    width: 93%;
     transition: 250ms;
     background: white;
     color: black;
+    border-radius: 15px;
+}
+
+.modal__info {
     padding: 1rem;
 }
 
