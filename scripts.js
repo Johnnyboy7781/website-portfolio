@@ -6,28 +6,82 @@ var navMenu = document.querySelector("nav");
 var body = document.querySelector("body");
 var modal = document.querySelector("#modal");
 var projects = document.querySelectorAll(".project");
-var closeModal = document.querySelector(".close-modal");
+var modalCloser = document.querySelector(".close-modal");
+var tagList = document.querySelector(".modal__tags");
 
 const projectArr = [
     {
         title: "Shasha",
-        description: "lorem shasha",
-        img: "url('./assets/projects/01.jpg')"
+        description: `A full stack chat bot that uses a natural language processor 
+            to parse human-readable text and provide an appropriate response.
+            The bot can respond to basic speech as well as some therapy-related 
+            topics.`,
+        img: "url('./assets/projects/01.jpg')",
+        tags: [
+            "node",
+            "javascript",
+            "mysql",
+            "sequelize",
+            "node-nlp",
+            "express",
+            "handlebars",
+            "heroku"
+        ],
+        links: [
+
+        ]
     },
     {
         title: "The Tech Blog",
         description: "lorem tech blog",
-        img: "url('./assets/projects/02.png')"
+        img: "url('./assets/projects/02.png')",
+        tags: [
+            "node",
+            "javascript",
+            "mysql",
+            "sequelize",
+            "express",
+            "handlebars"
+        ],
+        links: [
+
+        ]
     },
     {
         title: "Refreshr",
         description: "lorem refreshr",
-        img: "url('./assets/projects/03.jpg')"
+        img: "url('./assets/projects/03.jpg')",
+        tags: [
+            "node",
+            "javascript",
+            "mongodb",
+            "mongoose",
+            "graphql",
+            "express",
+            "styled-components",
+            "react",
+            "MERN"
+        ],
+        links: [
+
+        ]
     },
     {
         title: "MyCows Ultimate",
         description: "lorem mycows",
-        img: "url('./assets/projects/04.png')"
+        img: "url('./assets/projects/04.png')",
+        tags: [
+            "javascript",
+            "react-native",
+            "native-base",
+            "expo",
+            "android",
+            "iOS",
+            "first-project"
+        ],
+        links: [
+            
+        ]
     }
 ]
 
@@ -93,13 +147,25 @@ const openModal = e => {
     const desc = document.querySelector("#modal__desc");
     const img = document.querySelector("#modal__img");
     const projectClass = e.target.className.split(" ")[1];
-    const projectIndex = parseInt(projectClass[1]);
+    const currProject = projectArr[parseInt(projectClass[1])]
 
-    title.innerHTML = projectArr[projectIndex].title;
-    desc.innerHTML = projectArr[projectIndex].description;
-    img.style.backgroundImage = projectArr[projectIndex].img;
+    title.innerHTML = currProject.title;
+    desc.innerHTML = currProject.description;
+    img.style.backgroundImage = currProject.img;
+
+    for (let i = 0; i < currProject.tags.length; i++) {
+        const tag = document.createElement("li");
+        tag.innerHTML = currProject.tags[i];
+        tag.className = "project-tag"
+        tagList.appendChild(tag);
+    }
 
     modal.classList.add("open-modal");
+}
+
+const closeModal = () => {
+    modal.classList.remove("open-modal");
+    tagList.innerHTML = "";
 }
 
 projects.forEach(function (project) {
@@ -110,11 +176,11 @@ modal.addEventListener("click", function (e) {
     if (e.target.className !== "modal open-modal") {
         return;
     }
-    modal.classList.remove("open-modal");
+    closeModal();
 });
 
-closeModal.addEventListener("click", function () {
-    modal.classList.remove("open-modal");
+modalCloser.addEventListener("click", function () {
+    closeModal();
 });
 
 heroSectionObserver.observe(heroSection);
