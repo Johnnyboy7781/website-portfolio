@@ -305,13 +305,13 @@ nav ul li a:hover {
     text-shadow: 0px 0px 7px black;
 }
 
-.projects__github a {
+.underline-link {
     text-decoration: underline;
     color: white;
     position: relative;
 }
 
-.projects__github a::after {
+.underline-link::after {
     content: "";
     position: absolute;
     height: 2px;
@@ -324,7 +324,7 @@ nav ul li a:hover {
     transition: transform 300ms;
 }
 
-.projects__github a:hover::after {
+.underline-link:hover::after {
     transform: scaleX(1);
     transform-origin: left;
 }
@@ -595,6 +595,19 @@ nav ul li a:hover {
 
 .contact__info a {
     cursor: pointer;
+}
+
+.contact__info p {
+    font-size: clamp(1em, 3.5vw, 1.7em);
+}
+
+.underline-link__contact {
+    color: #46299d;
+    text-decoration: none;
+}
+
+.underline-link__contact::after {
+    bottom: 4px;
 }
 
 /* Footer styles */
