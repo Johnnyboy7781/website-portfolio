@@ -355,8 +355,8 @@ nav ul li a:hover {
 
 .modal__img h3 {
     position: absolute;
-    bottom: 5px;
-    left: 5px;
+    bottom: 1rem;
+    left: 11px;
     padding: 4px 5px;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 0.7rem;
@@ -384,6 +384,11 @@ nav ul li a:hover {
 
 .modal__info p {
     display: inline;
+}
+
+.modal__position {
+    color: grey;
+    text-decoration: underline;
 }
 
 .modal__tags {
@@ -416,11 +421,12 @@ nav ul li a:hover {
 .modal__link {
     flex: 1;
     margin: 0;
+    padding-block: 0.2rem;
 }
 
 .close-modal {
     margin: 0;
-    /* align-self: flex-end; */
+    padding-block: 0.2rem;
 }
 
 /* skills styles */

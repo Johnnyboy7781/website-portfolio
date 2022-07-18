@@ -12,6 +12,7 @@ var tagList = document.querySelector(".modal__tags");
 const projectArr = [
     {
         title: "Shasha",
+        position: "Lead Developer",
         description: `A full stack chat bot that uses a natural language processor 
             to parse human-readable text and provide an appropriate response.
             The bot can respond to basic speech as well as some therapy-related 
@@ -33,7 +34,11 @@ const projectArr = [
     },
     {
         title: "The Tech Blog",
-        description: "lorem tech blog",
+        position: "Full-Stack Developer",
+        description: `A full stack social media site where developers can post 
+            their current thoughts. This app, made with MySQL and Sequelize, defines
+            relationships between user models, their posts, and their comments to give an
+            immersive, social experience`,
         img: "url('./assets/projects/02.png')",
         tags: [
             "node",
@@ -49,7 +54,11 @@ const projectArr = [
     },
     {
         title: "Refreshr",
-        description: "lorem refreshr",
+        position: "Full-Stack Developer",
+        description: `A full stack e-commerce site for buying hypothetical energy
+            drinks. Data manipulation driven by GraphQL allows users to interact
+            with commerce data in meaningful ways, allowing users to favorite drinks
+            as well as add them to a cart with a hypothetical Stripe integration.`,
         img: "url('./assets/projects/03.jpg')",
         tags: [
             "node",
@@ -68,7 +77,12 @@ const projectArr = [
     },
     {
         title: "MyCows Ultimate",
-        description: "lorem mycows",
+        position: "Sole Software Developer",
+        description: `A mobile game app meant to be played during road trips. Players
+            will call out common objects that they see and keep track of scores on the app.
+            Though this app is a bit rough around the edges, it represents my first coding project.
+            All code was developed by me with art assets done by my colleague. App has been deployed
+            to both android and iOS. Repository is private at this time.`,
         img: "url('./assets/projects/04.png')",
         tags: [
             "javascript",
@@ -144,12 +158,14 @@ var menuToggle = function () {
 
 const openModal = e => {
     const title = document.querySelector("#modal__title");
+    const position = document.querySelector('#modal__position')
     const desc = document.querySelector("#modal__desc");
     const img = document.querySelector("#modal__img");
     const projectClass = e.target.className.split(" ")[1];
     const currProject = projectArr[parseInt(projectClass[1])]
 
     title.innerHTML = currProject.title;
+    position.innerHTML = currProject.position;
     desc.innerHTML = currProject.description;
     img.style.backgroundImage = currProject.img;
 
