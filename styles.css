@@ -387,7 +387,7 @@ nav ul li a:hover {
 }
 
 .modal__position {
-    color: grey;
+    color: rgb(99, 99, 99);
     text-decoration: underline;
 }
 

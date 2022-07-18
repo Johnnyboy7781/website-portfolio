@@ -29,7 +29,8 @@ const projectArr = [
             "heroku"
         ],
         links: [
-
+            "https://github.com/Johnnyboy7781/shasha",
+            "https://shielded-bayou-08776.herokuapp.com/"
         ]
     },
     {
@@ -49,7 +50,8 @@ const projectArr = [
             "handlebars"
         ],
         links: [
-
+            "https://github.com/Johnnyboy7781/tech-blog",
+            "https://powerful-caverns-73555.herokuapp.com/"
         ]
     },
     {
@@ -72,7 +74,8 @@ const projectArr = [
             "MERN"
         ],
         links: [
-
+            "https://github.com/Johnnyboy7781/refreshr",
+            "https://mighty-reef-66523.herokuapp.com/"
         ]
     },
     {
@@ -94,7 +97,8 @@ const projectArr = [
             "first-project"
         ],
         links: [
-            
+            "https://apps.apple.com/by/app/mycows-ultimate/id1578990284",
+            "https://play.google.com/store/apps/details?id=com.sfzgames.mycowsultimate&hl=en_US&gl=US"
         ]
     }
 ]
@@ -158,7 +162,8 @@ var menuToggle = function () {
 
 const openModal = e => {
     const title = document.querySelector("#modal__title");
-    const position = document.querySelector('#modal__position')
+    const position = document.querySelector('#modal__position');
+    const links = document.querySelectorAll("#modal__link");
     const desc = document.querySelector("#modal__desc");
     const img = document.querySelector("#modal__img");
     const projectClass = e.target.className.split(" ")[1];
@@ -168,6 +173,18 @@ const openModal = e => {
     position.innerHTML = currProject.position;
     desc.innerHTML = currProject.description;
     img.style.backgroundImage = currProject.img;
+
+    for (let i = 0; i < links.length; i++) {
+        links[i].onclick = function() {window.open(currProject.links[i],'_blank')};
+    }
+
+    if (currProject.title === "MyCows Ultimate") {
+        links[0].textContent = "Android";
+        links[1].textContent = "iOS";
+    } else {
+        links[0].textContent = "Code";
+        links[1].textContent = "Deploy";
+    }
 
     for (let i = 0; i < currProject.tags.length; i++) {
         const tag = document.createElement("li");
