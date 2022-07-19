@@ -114,7 +114,6 @@ var options = {
 var heroSectionObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
         if (!entry.isIntersecting) {
-            console.log("Intersection 1");
             [].forEach.call(hamburgerLines, function (el) {
                 el.classList.add("backing");
             });
@@ -131,7 +130,6 @@ var heroSectionObserver = new IntersectionObserver(function (entries) {
 var aboutSectionObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
         if (!entry.isIntersecting) {
-            console.log("Intersection 2");
             [].forEach.call(hamburgerLines, function (el) {
                 el.classList.remove("backing");
             });

@@ -1,11 +1,46 @@
 const APP_PREFIX = 'jvmcdonnell-';
-const VERSION = 'version01';
+const VERSION = 'version02';
 const CACHE_NAME = APP_PREFIX + VERSION;
 
 const FILES_TO_CACHE = [
     "./index.html",
     "./styles.css",
-    "./scripts.js"
+    "./scripts.js",
+    "./manifest.webmanifest",
+    "./assets/back-end/csharp.png",
+    "./assets/back-end/express.png",
+    "./assets/back-end/graphql.png",
+    "./assets/back-end/jest.png",
+    "./assets/back-end/mongodb.png",
+    "./assets/back-end/mongoose.png",
+    "./assets/back-end/mysql.png",
+    "./assets/back-end/node.png",
+    "./assets/back-end/rest.png",
+    "./assets/back-end/sequelize.svg",
+    "./assets/certs/ucf.png",
+    "./assets/contact/github.png",
+    "./assets/contact/linkedin.png",
+    "./assets/contact/mail.png",
+    "./assets/contact/phone.png",
+    "./assets/front-end/bootstrap.png",
+    "./assets/front-end/css.png",
+    "./assets/front-end/hdbs.png",
+    "./assets/front-end/heroku.png",
+    "./assets/front-end/html.png",
+    "./assets/front-end/jquery.png",
+    "./assets/front-end/js.png",
+    "./assets/front-end/react.png",
+    "./assets/front-end/s-c.png",
+    "./assets/icons/512x512.png",
+    "./assets/projects/01.jpg",
+    "./assets/projects/02.png",
+    "./assets/projects/03.jpg",
+    "./assets/projects/04.png",
+    "./assets/headshot.jpg",
+    "./assets/resume.pdf",
+    "./assets/wave-projects-top.svg",
+    "./assets/wave-skills-bottom.svg",
+    "./assets/wave-skills-top.svg"
 ];
 
 self.addEventListener("install", function (e) {
