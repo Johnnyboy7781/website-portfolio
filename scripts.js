@@ -6,6 +6,7 @@ let navMenu = document.querySelector("nav");
 let body = document.querySelector("body");
 let modal = document.querySelector("#modal");
 let projects = document.querySelectorAll(".project");
+let projectTitles = document.querySelectorAll("#project__title");
 let modalCloser = document.querySelector(".close-modal");
 let tagList = document.querySelector(".modal__tags");
 
@@ -99,8 +100,8 @@ const projectArr = [
             "first-project"
         ],
         links: [
-            "https://apps.apple.com/by/app/mycows-ultimate/id1578990284",
-            "https://play.google.com/store/apps/details?id=com.sfzgames.mycowsultimate&hl=en_US&gl=US"
+            "https://play.google.com/store/apps/details?id=com.sfzgames.mycowsultimate&hl=en_US&gl=US",
+            "https://apps.apple.com/by/app/mycows-ultimate/id1578990284"
         ]
     }
 ]
@@ -208,6 +209,10 @@ const closeModal = () => {
 projects.forEach(function (project) {
     project.addEventListener('click', openModal);
 });
+
+projectTitles.forEach(function (projectTitle) {
+    projectTitle.addEventListener('click', openModal)
+})
 
 modal.addEventListener("click", function (e) {
     if (e.target.className !== "modal open-modal") {
