@@ -1,0 +1,16 @@
+{
+    "name": "Jonathan McDonnell",
+    "short_name": "JVM Portfolio",
+    "lang": "en-US",
+    "start_url": "/jvmcdonnell.net",
+    "display": "standalone",
+    "theme_color": "#8138f1",
+    "icons": [
+      {
+        "src": "assets/icon.png",
+        "sizes": "512x512",
+        "type": "image.png"
+      }
+    ],
+    "background_color": "#8138f1"
+  }

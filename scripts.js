@@ -1,13 +1,15 @@
-var hamburger = document.querySelector(".hamburger");
-var hamburgerLines = document.querySelectorAll(".hamburger__line");
-var heroSection = document.querySelector(".hero");
-var aboutSection = document.querySelector("#about");
-var navMenu = document.querySelector("nav");
-var body = document.querySelector("body");
-var modal = document.querySelector("#modal");
-var projects = document.querySelectorAll(".project");
-var modalCloser = document.querySelector(".close-modal");
-var tagList = document.querySelector(".modal__tags");
+let hamburger = document.querySelector(".hamburger");
+let hamburgerLines = document.querySelectorAll(".hamburger__line");
+let heroSection = document.querySelector(".hero");
+let aboutSection = document.querySelector("#about");
+let navMenu = document.querySelector("nav");
+let body = document.querySelector("body");
+let modal = document.querySelector("#modal");
+let projects = document.querySelectorAll(".project");
+let modalCloser = document.querySelector(".close-modal");
+let tagList = document.querySelector(".modal__tags");
+
+let siteLoadCheck = 0;
 
 const projectArr = [
     {
@@ -112,11 +114,13 @@ var options = {
 var heroSectionObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
         if (!entry.isIntersecting) {
+            console.log("Intersection 1");
             [].forEach.call(hamburgerLines, function (el) {
                 el.classList.add("backing");
             });
-        }
-        else {
+        } else if (siteLoadCheck < 2) { // TODO: Refactor, seems bruteforce-y
+            siteLoadCheck++;
+        } else {
             [].forEach.call(hamburgerLines, function (el) {
                 el.classList.remove("backing");
             });
@@ -127,11 +131,13 @@ var heroSectionObserver = new IntersectionObserver(function (entries) {
 var aboutSectionObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
         if (!entry.isIntersecting) {
+            console.log("Intersection 2");
             [].forEach.call(hamburgerLines, function (el) {
                 el.classList.remove("backing");
             });
-        }
-        else {
+        } else if (siteLoadCheck < 2) {
+            siteLoadCheck++;
+        } else {
             [].forEach.call(hamburgerLines, function (el) {
                 el.classList.add("backing");
             });
