@@ -1,5 +1,5 @@
 const APP_PREFIX = 'jvmcdonnell-';
-const VERSION = 'version02';
+const VERSION = 'version03';
 const CACHE_NAME = APP_PREFIX + VERSION;
 
 const FILES_TO_CACHE = [
