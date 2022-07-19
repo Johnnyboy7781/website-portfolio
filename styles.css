@@ -30,6 +30,10 @@ a {
     box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
+.text-shadow {
+    text-shadow: 0px 0px 5px black;
+}
+
 /* Nav styles */
 header {
     padding: 25px;
@@ -469,6 +473,7 @@ nav ul li a:hover {
     border-radius: 0.7rem 0.7rem 0 0;
     padding: 5px 5px 5px 5px;
     position: relative;
+    text-shadow: 0px 0px 4px black;
 }
 
 .skills__title::after {
@@ -500,6 +505,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     white-space: nowrap;
+    text-shadow: 0px 0px 4px black;
 }
 
 .skill__box {
@@ -516,6 +522,11 @@ nav ul li a:hover {
 
 .cert__name {
     font-size: 1.2em;
+    text-shadow: 0px 0px 4px black;
+}
+
+.cert__info {
+    text-shadow: 0px 0px 4px black;
 }
 
 .cert {
