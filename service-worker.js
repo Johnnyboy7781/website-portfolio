@@ -1,5 +1,5 @@
 const APP_PREFIX = 'jvmcdonnell-';
-const VERSION = 'version06';
+const VERSION = 'version08';
 const CACHE_NAME = APP_PREFIX + VERSION;
 
 const FILES_TO_CACHE = [
@@ -63,7 +63,7 @@ self.addEventListener("activate", function (e) {
             return Promise.all(
                 keyList.map(function(key, i) {
                     if (cacheKeeplist.indexOf(key) === -1) {
-                        console.log('deleting cache: ' + keyList[i]);
+                        // console.log('deleting cache: ' + keyList[i]); Debugging
                         return caches.delete(keyList[i]);
                     }
                 })
@@ -73,14 +73,14 @@ self.addEventListener("activate", function (e) {
 });
 
 self.addEventListener("fetch", function (e) {
-    console.log('fetch request: ' + e.request.url);
+    // console.log('fetch request: ' + e.request.url); Debugging
     e.respondWith(
         caches.match(e.request).then(function(req) {
             if (req) {
-                console.log('responding with cache: ' + e.request.url);
+                // console.log('responding with cache: ' + e.request.url); Debugging
                 return req;
             } else {
-                console.log('file is not cached, fetching: ' + e.request.url);
+                // console.log('file is not cached, fetching: ' + e.request.url); Debugging
                 return fetch(e.request);
             }
         })
