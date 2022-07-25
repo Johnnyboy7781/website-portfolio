@@ -504,8 +504,9 @@ nav ul li a:hover {
 .skills__name {
     display: flex;
     justify-content: center;
-    white-space: nowrap;
+    white-space: normal;
     text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9);
+    text-align: center;
 }
 
 .skill__box {
